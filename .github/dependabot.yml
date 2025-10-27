@@ -1,18 +1,4 @@
 version: 2
-registries:
-  # Allows dependabot to pull repo based gems
-  github-org-private:
-    type: git
-    url: https://github.com
-    username: x-access-token
-    password: "${{secrets.ROBOT_READONLY_PACKAGE_READER}}"
-
-  # Allows dependabot to pull from GH Packages
-  github-org-ruby-private:
-    type: rubygems-server
-    url: https://rubygems.pkg.github.com/gocardless
-    username: gocardless-robot-readonly
-    password: "${{secrets.ROBOT_READONLY_PACKAGE_READER}}"
 
 updates:
   - package-ecosystem: bundler
@@ -21,9 +7,6 @@ updates:
       interval: daily
     open-pull-requests-limit: 10
     insecure-external-code-execution: allow
-    registries:
-      - github-org-private
-      - github-org-ruby-private
     versioning-strategy: auto
     allow:
       # Allow both direct and indirect updates for all packages
