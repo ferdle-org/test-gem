@@ -6,7 +6,7 @@ source "https://rubygems.org"
 group :development, :test do
   gem "gc_ruboconfig", "~> 5.0"
   gem "pry", "~> 0.15.0"
-  gem "rake", "~> 13.0"
+  gem "rake", "~> 13.3"
   gem "rspec", "~> 3.0"
   gem "rspec-github"
   gem "rspec-sorbet"
